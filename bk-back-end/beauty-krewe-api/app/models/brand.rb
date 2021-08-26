@@ -1,4 +1,3 @@
-class Brand < ActiveRecord::Base
-    has_many :products
+class Brand < ApplicationRecord
     
 end
