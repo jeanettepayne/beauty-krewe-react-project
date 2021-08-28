@@ -8,7 +8,7 @@ import Footer from './Footer';
 
 ReactDOM.render(
   <React.StrictMode>
-    {/* <App /> */}
+    <App />
     <Header />
     <Footer />
   </React.StrictMode>,
