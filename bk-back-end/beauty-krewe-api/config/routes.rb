@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  root 'homepage#index'
+  # get 'homepage/index'
   resources :influencers
   resources :products
   resources :brands
