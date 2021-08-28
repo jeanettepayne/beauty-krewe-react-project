@@ -1,4 +1,5 @@
 class Product < ApplicationRecord
     belongs_to :brand
-    has_and_belongs_to_many :influencers
+    has_many :influencers_products
+    has_many :influencers, :through => influencers_products
 end
