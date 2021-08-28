@@ -1,4 +1,4 @@
-class InfluencersController < ApplicationController
+class Api::InfluencersController < ApplicationController
 
     def index
         influencers = Influencer.all
