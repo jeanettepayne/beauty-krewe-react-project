@@ -2,21 +2,21 @@ class Api::ProductsController < ApplicationController
 
     def index
         products = Product.all
-        render json: Product.new(products)
+        render json: ProductSerializer.new(products)
     end
 
     def create
         product = Product.new(product_params)
         if product.save
-            render json: Product.new(product)
+            render json: ProductSerializer.new(product)
         else
-            render json: {error: 'Oops! There was an error adding the product'}
+            render json: {error: 'Oops! There was an error adding the product.'}
         end
     end
 
     def show
         product = Product.find(params[:id])
-        render json: Product.new(product)
+        render json: ProductSerializer.new(product)
     end
 
     def destroy
