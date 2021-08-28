@@ -2,7 +2,7 @@ class Api::InfluencersController < ApplicationController
 
     def index
         influencers = Influencer.all
-        render json: InfluencerSerializer.new(inflencers)
+        render json: InfluencerSerializer.new(influencers)
     end
 
     def create

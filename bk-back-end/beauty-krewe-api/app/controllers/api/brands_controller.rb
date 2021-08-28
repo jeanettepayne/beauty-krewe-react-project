@@ -1,13 +1,13 @@
 class Api::BrandsController < ApplicationController
     def index
         brands = Brand.all
-        render json: BrandSerializer.new(brands)
+        render json: brands, each_serializer: BrandSerializer
     end
 
     def create
         brand = Brand.new(brand_params)
         if brand.save
-            render json: BrandSerializer.new(brand)
+            render json: brand, each_serializer: BrandSerializer
         else
             render json: {error: 'Ooops! There was an error adding the brand.'}
         end
@@ -15,7 +15,7 @@ class Api::BrandsController < ApplicationController
 
     def show
         brand = Brand.find(params[:id])
-        render json: BrandSerializer.new(brand)
+        render json: brand, each_serializer: BrandSerializer
     end
 
     def destroy

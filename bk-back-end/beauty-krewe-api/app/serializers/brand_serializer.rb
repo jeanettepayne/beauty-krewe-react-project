@@ -1,4 +1,5 @@
-class BrandSerializer
-    include FastJsonapi::ObjectSerializer
-    attributes :name
+class BrandSerializer < ActiveModel::Serializer
+  attributes :id, :name
+
+  has_many :products
 end
