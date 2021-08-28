@@ -14,4 +14,13 @@ class Api::InfluencersController < ApplicationController
             render json: {errors: board.errors.full_messages}, status: :unprocessable_entity
         end
     end
+
+    def show
+
+    end
+
+    private
+    def influencer_params
+        params.require(:influencer).permit(:name)
+    end
 end
