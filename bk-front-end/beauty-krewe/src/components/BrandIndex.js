@@ -4,7 +4,7 @@ const BrandIndex = (props) => {
 
     return(
         <div>
-            BrandIndex
+            {props.brands.map(brand => <li> {brand.name} </li>)}
         </div>
     )
 
