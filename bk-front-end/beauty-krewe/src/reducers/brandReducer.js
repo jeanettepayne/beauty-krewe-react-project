@@ -1,4 +1,9 @@
 export default function brandReducer(state = {brands: []}, action) {
 
-    return state
+    switch (action.type) {
+        case 'FETCH_BRANDS':
+            return {brands: action.payload}
+        default:
+            return state
+    }
 }

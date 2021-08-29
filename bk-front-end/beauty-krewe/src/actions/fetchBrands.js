@@ -1,6 +1,11 @@
 export default function fetchBrands() {
+    return (dispatch) => {
     fetch('http://localhost:3001/api/brands')
      .then(response => response.json())
-     .then(data => console.log(data))
+     .then(brands => dispatch({
+         type: 'FETCH_BRANDS',
+         payload: brands
+     }))
+    }
 }
 
