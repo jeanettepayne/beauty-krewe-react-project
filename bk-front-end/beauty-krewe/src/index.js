@@ -5,16 +5,21 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import Header from './Header';
 import Footer from './Footer';
-import { createStore, applyMiddleware } from 'redux';
+import { createStore, applyMiddleware, compose } from 'redux';
 import thunk from 'redux-thunk';
 import { Provider } from 'react-redux';
 
+//store setup, storing data globally
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+
+let store = createStore(reducer, composeEnhancers(applyMiddleware(thunk)))
+
 ReactDOM.render(
-  <React.StrictMode>
+  <Provider store={store}>
     <App />
     <Header />
     <Footer />
-  </React.StrictMode>,
+  </Provider>,
   document.getElementById('root')
 );
 
