@@ -1,4 +1,4 @@
-export default function brandReducer(state = {influencers: []}, action) {
+export default function influencerReducer(state = {influencers: []}, action) {
 
     switch (action.type) {
         case 'FETCH_INFLUENCERS':

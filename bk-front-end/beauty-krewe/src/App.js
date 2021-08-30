@@ -3,6 +3,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import fetchBrands from './actions/fetchBrands';
 import BrandsContainer from './containers/BrandsContainer';
+import InfluencersContainer from './containers/InfluencersContainer';
 
 class App extends React.Component {
 
@@ -16,6 +17,7 @@ class App extends React.Component {
     return (
     <div className="App">
       <BrandsContainer />
+      <InfluencersContainer />
     </div>
   );
     }
