@@ -1,4 +1,6 @@
 import React from 'react';
+import { connect } from 'react-redux';
+import addProduct from '../actions/addProduct';
 
 
 class ProductForm extends React.Component {
@@ -11,25 +13,32 @@ class ProductForm extends React.Component {
     }
 
     handleChange = (event) => {
+        this.setState({
+            [event.target.name]: event.target.value
+        })
+    }
 
+    handleSubmit = (event) => {
+        event.preventDefault()
+        this.props.addProduct(this.state)
     }
 
     render() {
         return (
             <div>
-                This is where the product form goes.
-                <form>
+                <h3>Add a Product</h3>
+                <form onSubmit={this.handleSubmit}>
                     <label>Product Name: </label>
-                    <input type="text" placeholder="Enter Name" value={this.state.name} onChange={this.handleChange}/>
+                    <input type="text" placeholder="Enter Name" value={this.state.name} name="name" onChange={this.handleChange}/>
                     <br></br>
                     <label>Product Price: </label>
-                    <input type="text" placeholder="Enter Price (without $)" value={this.state.price} onChange={this.handleChange}/>
+                    <input type="text" placeholder="Enter Price (without $)" value={this.state.price} name="price" onChange={this.handleChange}/>
                     <br></br>
                     <label>Product Rating: </label>
-                    <input type="text" placeholder="Enter Rating" value={this.state.rating} onChange={this.handleChange}/>
+                    <input type="text" placeholder="Enter Rating" value={this.state.rating} name="rating" onChange={this.handleChange}/>
                     <br></br>
                     <label>Product Description: </label>
-                    <textarea placeholder="Enter Description" value={this.state.description} onChange={this.handleChange}/>
+                    <textarea placeholder="Enter Description" value={this.state.description} name="description" onChange={this.handleChange}/>
                     <br></br>
                     <input type="reset" value="Reset Form" />
                     <input type="submit" value="Submit" />
@@ -40,4 +49,4 @@ class ProductForm extends React.Component {
     }
 }
 
-export default ProductForm;
+export default connect(null, {addProduct})(ProductForm);
