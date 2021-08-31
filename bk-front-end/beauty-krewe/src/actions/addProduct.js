@@ -9,5 +9,7 @@ export default function addProduct(data) {
             method: 'POST',
             body: JSON.stringify(data)
         })
+        .then(response => response.json())
+        .then(product => dispatch({type: 'ADD_PRODUCT', payload: product}))
     }
 }
