@@ -17,7 +17,7 @@ class App extends React.Component {
     return (
     <div className="App">
       <BrandsContainer />
-      <InfluencersContainer />
+      {/* <InfluencersContainer /> */}
     </div>
   );
     }
