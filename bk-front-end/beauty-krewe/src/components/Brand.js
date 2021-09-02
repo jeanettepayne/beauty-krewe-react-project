@@ -3,9 +3,9 @@ import React from 'react';
 const Brand = (props) => {
 
     return (
-        <div>
+        <li>
             {props.brand.name}
-        </div>
+        </li>
     )
 }
 

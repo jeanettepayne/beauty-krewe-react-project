@@ -6,7 +6,7 @@ const ProductIndex = (props) => {
 
     return(
         <div>
-            {props.products.map(product => <li key={product.id}> <Product product={product} /> </li>)}
+            {props.products.map(product => <div key={product.id}> <Product product={product} /> </div>)}
         </div>
     )
 
