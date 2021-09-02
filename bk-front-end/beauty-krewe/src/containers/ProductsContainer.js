@@ -2,6 +2,7 @@ import React from 'react';
 import ProductIndex from '../components/ProductIndex';
 import { connect } from 'react-redux';
 import fetchProducts from '../actions/fetchProducts';
+import Product from '../components/Product';
 
 class ProductsContainer extends React.Component {
 

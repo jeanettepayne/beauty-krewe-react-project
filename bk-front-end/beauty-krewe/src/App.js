@@ -5,22 +5,16 @@ import fetchBrands from './actions/fetchBrands';
 import BrandsContainer from './containers/BrandsContainer';
 import InfluencersContainer from './containers/InfluencersContainer';
 import ProductForm from './components/ProductForm';
+import BrandIndex from './components/BrandIndex';
 
 class App extends React.Component {
-
-  // componentDidMount() {
-  //   fetch('http://localhost:3001/api/brands')
-  //   .then(response => response.json())
-  //   .then(data => console.log(data))
-  // }
 
   render () {
     return (
     <div className="App">
-      {/* <BrandsContainer /> */}
+      <BrandsContainer />
       {/* <InfluencersContainer /> */}
-      {/* <ProductsContainer /> */}
-      <ProductForm />
+      {/* <ProductForm /> */}
     </div>
   );
     }
