@@ -3,6 +3,7 @@ import BrandIndex from '../components/BrandIndex';
 import { connect } from 'react-redux';
 import fetchBrands from '../actions/fetchBrands';
 import { Route } from 'react-router-dom';
+import Brand from '../components/Brand';
 
 class BrandsContainer extends React.Component {
 
@@ -13,8 +14,9 @@ class BrandsContainer extends React.Component {
     render() {
         return(
             <div>
-                <Route exact path='/brands' render={() => < BrandIndex brands={this.props.brands} />} />
+                <Route exact path='/brands' render={(routerProps) => <BrandIndex {...routerProps} brands={this.props.brands} />} />
                 {/* <BrandIndex brands={this.props.brands} /> */}
+                <Route path='/brands/:id' render={(routerProps) => <Brand {...routerProps} brands={this.props.brands} />} />
             </div>
         )
     }

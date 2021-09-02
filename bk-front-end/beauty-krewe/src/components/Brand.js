@@ -2,9 +2,11 @@ import React from 'react';
 
 const Brand = (props) => {
 
+    let brand = props.brands[props.match.params.id - 1]
+
     return (
         <li>
-            {props.brand.name}
+            {brand ? brand.name : null}
         </li>
     )
 }
