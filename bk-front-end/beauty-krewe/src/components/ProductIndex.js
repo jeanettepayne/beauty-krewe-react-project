@@ -5,7 +5,7 @@ const ProductIndex = (props) => {
 
     return(
         <div>
-            {props.products.map(product => <div key={product.id}> <Product product={product} /> </div>)}
+            {props.products && props.products.map(product => <div key={product.id}> <Product product={product} /> </div>)}
             {/* product index */}
         </div>
     )

@@ -25,7 +25,9 @@ class ProductForm extends React.Component {
             name: '', 
             price: '', 
             rating: '', 
-            description: ''
+            description: '',
+            brand: '',
+            influencers: ''
         })
     }
 
@@ -37,6 +39,11 @@ class ProductForm extends React.Component {
                     <label>Product Name: </label>
                     <input type="text" placeholder="Enter Name" value={this.state.name} name="name" onChange={this.handleChange}/>
                     <br></br>
+                    <label>Brand:</label>
+                    <select name="brand" value={this.state.brand} onChange={this.handleChange}>
+                        <option>iterate through existing brands here!!</option>
+                    </select>
+                    <br></br>
                     <label>Product Price: </label>
                     <input type="text" placeholder="Enter Price (without $)" value={this.state.price} name="price" onChange={this.handleChange}/>
                     <br></br>
@@ -45,6 +52,11 @@ class ProductForm extends React.Component {
                     <br></br>
                     <label>Product Description: </label>
                     <textarea placeholder="Enter Description" value={this.state.description} name="description" onChange={this.handleChange}/>
+                    <br></br>
+                    <label>Recommended by:</label>
+                    <select  name="influencers" value={this.state.influencers} onChange={this.handleChange}>
+                        <option>Add check box options iterated through existing influencers/option to add an influencer if they don't exist</option>
+                    </select>
                     <br></br>
                     {/* fix reset button or delete it  */}
                     <input type="reset" value="Reset Form" />
