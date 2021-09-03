@@ -9,7 +9,9 @@ class ProductForm extends React.Component {
         name: '', 
         price: '', 
         rating: '', 
-        description: ''
+        description: '',
+        brand: '',
+        influencers: ''
     }
 
     handleChange = (event) => {
@@ -41,6 +43,7 @@ class ProductForm extends React.Component {
                     <br></br>
                     <label>Brand:</label>
                     <select name="brand" value={this.state.brand} onChange={this.handleChange}>
+                        <option>Select Brand</option>
                         <option>iterate through existing brands here!!</option>
                     </select>
                     <br></br>
@@ -54,7 +57,8 @@ class ProductForm extends React.Component {
                     <textarea placeholder="Enter Description" value={this.state.description} name="description" onChange={this.handleChange}/>
                     <br></br>
                     <label>Recommended by:</label>
-                    <select  name="influencers" value={this.state.influencers} onChange={this.handleChange}>
+                    <select name="influencers" value={this.state.influencers} onChange={this.handleChange}>
+                        <option>Select Influencer(s)</option>
                         <option>Add check box options iterated through existing influencers/option to add an influencer if they don't exist</option>
                     </select>
                     <br></br>

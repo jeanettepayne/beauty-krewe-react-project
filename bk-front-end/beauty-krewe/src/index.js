@@ -19,8 +19,8 @@ ReactDOM.render(
   <Provider store={store}>
     <Router>
       <App />
-      <Header />
-      <Footer />
+      {/* <Header /> */}
+      {/* <Footer /> */}
     </Router>
   </Provider>,
   document.getElementById('root')

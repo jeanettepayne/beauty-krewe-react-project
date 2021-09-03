@@ -6,6 +6,9 @@ import BrandsContainer from './containers/BrandsContainer';
 import InfluencersContainer from './containers/InfluencersContainer';
 import ProductForm from './components/ProductForm';
 import BrandIndex from './components/BrandIndex';
+import Product from './components/Product';
+import { Route } from 'react-router';
+
 
 class App extends React.Component {
 
@@ -15,10 +18,12 @@ class App extends React.Component {
       <BrandsContainer />
       {/* <InfluencersContainer /> */}
       {/* <ProductForm /> */}
+      {/* <Route path='/products/:id' render={(routerProps) => <Product {...routerProps} products={this.props.brand.products} />} /> */}
     </div>
   );
     }
 }
+
 
 // const mapStateToProps = (state) => {
 //   return {
