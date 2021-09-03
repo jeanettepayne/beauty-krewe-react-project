@@ -46,6 +46,7 @@ class ProductForm extends React.Component {
                     <label>Product Description: </label>
                     <textarea placeholder="Enter Description" value={this.state.description} name="description" onChange={this.handleChange}/>
                     <br></br>
+                    {/* fix reset button or delete it  */}
                     <input type="reset" value="Reset Form" />
                     <input type="submit" value="Submit" />
                     
