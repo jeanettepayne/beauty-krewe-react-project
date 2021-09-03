@@ -19,7 +19,8 @@ class ProductsContainer extends React.Component {
                 {/* <ProductIndex products={this.props.products} /> */}
                 {/* <ProductForm /> */}
                 {/* add brand={this.props.brand} to productform when wanting to associate with specific brand automatically */}
-                <Route path='/products/:id' render={(routerProps) => <Product {...routerProps} products={this.props.brand.products} />} />
+                <Route path='/products/:id' render={(routerProps) => <Product {...routerProps} products={this.props.products} />} />
+                {/* above was products={this.props.brand.products} - wasn't getting sent to Product.js */}
                 {/* <ProductIndex products={this.props.brand && this.props.brand.products}/> */}
             </div>
         )

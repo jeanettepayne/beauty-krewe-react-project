@@ -8,6 +8,7 @@ import ProductForm from './components/ProductForm';
 import BrandIndex from './components/BrandIndex';
 import Product from './components/Product';
 import { Route } from 'react-router';
+import ProductsContainer from './containers/ProductsContainer';
 
 
 class App extends React.Component {
@@ -16,6 +17,7 @@ class App extends React.Component {
     return (
     <div className="App">
       <BrandsContainer />
+      <ProductsContainer />
       {/* <InfluencersContainer /> */}
       {/* <ProductForm /> */}
       {/* <Route path='/products/:id' render={(routerProps) => <Product {...routerProps} products={this.props.brand.products} />} /> */}

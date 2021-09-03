@@ -8,10 +8,8 @@ const ProductIndex = (props) => {
     return(
         <div>
             {/* {props.products && props.products.map(product => <div key={product.id}> <Product product={product} /> </div>)} */}
-            testing
-            {props.products && props.products.map(product => <div key={product.id}> <Link to={`/products/${product.id}`}>{product.name}</Link></div>)}
-
-
+            {/* testing */}
+            {props.products && props.products.map(product => <div key={product.id}> <Link to={`/products/${product.id}`}> {product.name} </Link> </div>)}
         </div>
     )
 
