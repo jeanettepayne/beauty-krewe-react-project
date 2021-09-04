@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import fetchBrands from '../actions/fetchBrands';
 import { Route } from 'react-router-dom';
 import Brand from '../components/Brand';
-import Product from '../components/Product';
+// import Product from '../components/Product';
 
 class BrandsContainer extends React.Component {
 

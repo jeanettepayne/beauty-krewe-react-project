@@ -1,6 +1,6 @@
 import React from 'react';
 // import { Redirect } from 'react-router-dom';
-// import ProductsContainer from '../containers/ProductsContainer';
+import ProductsContainer from '../containers/ProductsContainer';
 import BrandProducts from './BrandProducts';
 
 const Brand = (props) => {
