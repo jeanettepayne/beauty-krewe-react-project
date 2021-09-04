@@ -7,6 +7,7 @@ import ProductForm from '../components/ProductForm';
 import { Route } from 'react-router-dom'
 
 class ProductsContainer extends React.Component {
+    debugger;
 
     componentDidMount() {
         this.props.fetchProducts()    

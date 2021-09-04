@@ -1,6 +1,7 @@
 import React from 'react';
 // import { Redirect } from 'react-router-dom';
-import ProductsContainer from '../containers/ProductsContainer';
+// import ProductsContainer from '../containers/ProductsContainer';
+import BrandProducts from './BrandProducts';
 
 const Brand = (props) => {
     // fix to find brand id, not array item
@@ -14,7 +15,9 @@ const Brand = (props) => {
                 {/* {brand ? null : <Redirect to='/brands'/>} */}
             </h2>
 
-            <ProductsContainer brand={brand} />
+            <BrandProducts brand={brand} />
+
+            {/* <ProductsContainer brand={brand} /> */}
         </div>
     )
 }
