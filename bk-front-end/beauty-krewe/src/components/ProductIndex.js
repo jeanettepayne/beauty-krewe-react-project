@@ -1,5 +1,5 @@
 import React from 'react';
-import Product from './Product';
+// import Product from './Product';
 import { Route, Link } from 'react-router-dom';
 
 const ProductIndex = (props) => {

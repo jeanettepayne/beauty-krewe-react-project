@@ -6,7 +6,8 @@ const Homepage = (props) => {
 
     return (
         <div>
-            This is the homepage
+            <h3>Welcome to Beauty Krewe!</h3>
+            <h4><em>Your premiere source for beauty product recommendations</em></h4>
             <br></br>
             <Link to={'/brands'}>Browse by Brand</Link>
             <br></br>

@@ -2,15 +2,15 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import Header from './Header';
-import Footer from './Footer';
+// import Header from './Header';
+// import Footer from './Footer';
 import { createStore, applyMiddleware, compose } from 'redux';
 import thunk from 'redux-thunk';
 import { Provider } from 'react-redux';
 import brandReducer from './reducers/brandReducer';
 import { BrowserRouter as Router } from 'react-router-dom';
-import productReducer from './reducers/productReducer';
-import rootReducer from './reducers/rootReducer';
+// import productReducer from './reducers/productReducer';
+// import rootReducer from './reducers/rootReducer';
 
 
 //store setup, storing data globally
