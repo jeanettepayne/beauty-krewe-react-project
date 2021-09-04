@@ -9,6 +9,7 @@ import BrandIndex from './components/BrandIndex';
 import Product from './components/Product';
 import { Route } from 'react-router';
 import ProductsContainer from './containers/ProductsContainer';
+import Homepage from './components/Homepage';
 
 
 class App extends React.Component {
@@ -21,6 +22,7 @@ class App extends React.Component {
       {/* <InfluencersContainer /> */}
       {/* <ProductForm /> */}
       {/* <Route path='/products/:id' render={(routerProps) => <Product {...routerProps} products={this.props.brand.products} />} /> */}
+      <Route exact path='/' render={() => <Homepage />} />
     </div>
   );
     }
