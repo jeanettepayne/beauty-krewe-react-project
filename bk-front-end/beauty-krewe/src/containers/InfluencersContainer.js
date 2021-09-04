@@ -14,7 +14,7 @@ class InfluencersContainer extends React.Component {
         return(
             <div>
                 {/* <InfluencerIndex influencers={this.props.influencers} /> */}
-                <Route exact path='/influencers' render={(routerProps) => <InfluencerIndex {...routerProps}influencers={this.props.influencers} />} />
+                <Route exact path='/influencers' render={(routerProps) => <InfluencerIndex {...routerProps} influencers={this.props.influencers} />} />
             </div>
         )
     }
