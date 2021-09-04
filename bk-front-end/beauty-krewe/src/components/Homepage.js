@@ -11,7 +11,7 @@ const Homepage = (props) => {
             <br></br>
             <Link to={'/brands'}>Browse by Brand</Link>
             <br></br>
-            Link to browse by Influencer
+            <Link to={'/influencers'}>Browse by Influencer</Link>
         </div>
     )
 }

@@ -2,6 +2,7 @@ import React from 'react';
 import InfluencerIndex from '../components/InfluencerIndex';
 import { connect } from 'react-redux';
 import fetchInfluencers from '../actions/fetchInfluencers';
+import { Route } from 'react-router-dom';
 
 class InfluencersContainer extends React.Component {
 
@@ -12,7 +13,8 @@ class InfluencersContainer extends React.Component {
     render() {
         return(
             <div>
-                <InfluencerIndex influencers={this.props.influencers} />
+                {/* <InfluencerIndex influencers={this.props.influencers} /> */}
+                <Route exact path='/influencers' render={(routerProps) => <InfluencerIndex {...routerProps}influencers={this.props.influencers} />} />
             </div>
         )
     }
