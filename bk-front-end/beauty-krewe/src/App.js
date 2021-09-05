@@ -35,7 +35,7 @@ class App extends React.Component {
 
 const mapStateToProps = (state) => {
   return {
-    products: state.apiReducer.products
+    products: state.productReducer.products
   }
 }
 
