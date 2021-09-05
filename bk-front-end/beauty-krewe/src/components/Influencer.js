@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Influencer = (props) => {
     console.log(props)
@@ -14,7 +15,7 @@ const Influencer = (props) => {
                 Recommended Products
             </h4>
             {/* fix on refresh - doesn't show list */}
-            {influencer.products && influencer.products.map(product => <div key={product.id}>{product.name}</div>)}
+            {influencer.products && influencer.products.map(product => <div key={product.id}> <Link to={`/products/${product.id}`}>{product.name}</Link> </div>)}
 
         </div>
     )

@@ -5,7 +5,7 @@ import BrandProducts from './BrandProducts';
 
 const Brand = (props) => {
     
-    let brand = props.brands.filter(brand => brand.id == props.match.params.id)[0]
+    let brand = props.brands[0].filter(brand => brand.id == props.match.params.id)[0]
     
     return (
         <div>

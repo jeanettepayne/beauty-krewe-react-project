@@ -14,9 +14,9 @@ import fetchApi from './actions/fetchApi';
 
 class App extends React.Component {
 
-  componentDidMount() {
-    this.props.fetchApi()    
-  }
+  // componentDidMount() {
+  //   this.props.fetchApi()    
+  // }
 
   render () {
     return (
@@ -33,10 +33,10 @@ class App extends React.Component {
 }
 
 
-const mapStateToProps = (state) => {
-  return {
-    products: state.productReducer.products
-  }
-}
+// const mapStateToProps = (state) => {
+//   return {
+//     products: state.productReducer.products
+//   }
+// }
 
-export default connect(mapStateToProps, {fetchApi})(App);
+export default connect(null, {fetchApi})(App);

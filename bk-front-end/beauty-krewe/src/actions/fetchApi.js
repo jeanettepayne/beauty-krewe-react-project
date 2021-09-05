@@ -4,7 +4,10 @@ export default function fetchApi() {
      .then(response => response.json())
      .then(products => dispatch({
          type: 'FETCH_PRODUCTS_API',
-         payload: products
+         payload: products,
+
+        //  type: 'FETCH_BRANDS_API',
+        //  payload: [...new Set(products.map(product => product.brand))]
      }))
     }
 }
