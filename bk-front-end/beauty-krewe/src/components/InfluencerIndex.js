@@ -5,8 +5,10 @@ const InfluencerIndex = (props) => {
 
     return(
         <div>
-            <h3>Influencers</h3>
-            {props.influencers.map(influencer => <div key={influencer.id}> <Link to={`/influencers/${influencer.id}`}> {influencer.name} </Link></div>)}
+            <h2>
+                Influencers
+            </h2>
+            {props.influencers && props.influencers.map(influencer => <div key={influencer.id}> <Link to={`/influencers/${influencer.id}`}> {influencer.name} </Link></div>)}
         </div>
     )
 
