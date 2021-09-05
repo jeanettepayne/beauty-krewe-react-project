@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import fetchBrands from './actions/fetchBrands';
 import BrandsContainer from './containers/BrandsContainer';
 import InfluencersContainer from './containers/InfluencersContainer';
-// import BrandIndex from './components/BrandIndex';
+import BrandIndex from './components/BrandIndex';
 // import Product from './components/Product';
 import { Route } from 'react-router';
 import ProductsContainer from './containers/ProductsContainer';

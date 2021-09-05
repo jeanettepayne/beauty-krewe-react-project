@@ -15,8 +15,9 @@ class BrandsContainer extends React.Component {
     render() {
         return(
             <div>
+                {/* <Route exact path='/brands' render={() => <BrandIndex brands={this.props.brands} />} /> */}
                 <Route exact path='/brands' render={(routerProps) => <BrandIndex {...routerProps} brands={this.props.brands} />} />
-                {/* <BrandIndex brands={this.props.brands} /> */}
+
                 <Route path='/brands/:id' render={(routerProps) => <Brand {...routerProps} brands={this.props.brands} />} />
                 {/* <Route path='/products/:id' render={(routerProps) => <Product {...routerProps} products={this.props.brand.products} />} /> */}
             </div>
@@ -26,7 +27,7 @@ class BrandsContainer extends React.Component {
 
 const mapStateToProps = state => {
     return {
-        brands: state.brands
+        brands: state.brandReducer.brands
     }
 }
 
