@@ -10,6 +10,11 @@ const Influencer = (props) => {
             <h2>
             {influencer.name}
             </h2>
+            <h4>
+                Recommended Products
+            </h4>
+            {/* fix on refresh - doesn't show list */}
+            {influencer.products && influencer.products.map(product => <div key={product.id}>{product.name}</div>)}
 
         </div>
     )

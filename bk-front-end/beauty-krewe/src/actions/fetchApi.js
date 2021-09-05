@@ -3,7 +3,7 @@ export default function fetchApi() {
     fetch('http://makeup-api.herokuapp.com/api/v1/products.json')
      .then(response => response.json())
      .then(products => dispatch({
-         type: 'FETCH_PRODUCTS',
+         type: 'FETCH_PRODUCTS_API',
          payload: products
      }))
     }

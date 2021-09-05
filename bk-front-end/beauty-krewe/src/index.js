@@ -9,6 +9,7 @@ import brandReducer from './reducers/brandReducer';
 import { BrowserRouter as Router } from 'react-router-dom';
 import influencerReducer from './reducers/influencerReducer';
 import productReducer from './reducers/productReducer';
+import apiReducer from './reducers/apiReducer';
 
 
 //store setup, storing data globally
@@ -17,7 +18,8 @@ const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 const rootReducer = combineReducers({
   brandReducer,
   productReducer,
-  influencerReducer
+  influencerReducer,
+  apiReducer
 })
 
 // let store = createStore(brandReducer, composeEnhancers(applyMiddleware(thunk)))

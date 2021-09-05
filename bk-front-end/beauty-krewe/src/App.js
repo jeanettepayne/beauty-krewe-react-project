@@ -9,9 +9,14 @@ import BrandIndex from './components/BrandIndex';
 import { Route } from 'react-router';
 import ProductsContainer from './containers/ProductsContainer';
 import Homepage from './components/Homepage';
+import fetchApi from './actions/fetchApi';
 
 
 class App extends React.Component {
+
+  componentDidMount() {
+    this.props.fetchApi()    
+  }
 
   render () {
     return (
@@ -28,10 +33,10 @@ class App extends React.Component {
 }
 
 
-// const mapStateToProps = (state) => {
-//   return {
-//     brands: state.brands
-//   }
-// }
+const mapStateToProps = (state) => {
+  return {
+    products: state.apiReducer.products
+  }
+}
 
-export default connect(null, {fetchBrands})(App);
+export default connect(mapStateToProps, {fetchApi})(App);
