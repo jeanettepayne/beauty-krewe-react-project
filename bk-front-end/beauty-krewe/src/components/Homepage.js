@@ -12,6 +12,8 @@ const Homepage = (props) => {
             <Link to={'/brands'}>Browse by Brand</Link>
             <br></br>
             <Link to={'/influencers'}>Browse by Influencer</Link>
+            <br></br>
+            <Link to={'/products'}>Browse All Products</Link>
         </div>
     )
 }
