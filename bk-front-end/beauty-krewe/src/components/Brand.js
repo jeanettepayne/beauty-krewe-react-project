@@ -7,7 +7,7 @@ const Brand = (props) => {
     // fix to find brand id, not array item
     // let brand = props.brands[props.match.params.id - 1]
     let brand = props.brands.filter(brand => brand.id == props.match.params.id)[0]
-
+    console.log(props)
     return (
         <div>
             <h2>
