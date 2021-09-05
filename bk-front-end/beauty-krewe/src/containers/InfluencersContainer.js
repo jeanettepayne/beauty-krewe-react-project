@@ -22,7 +22,7 @@ class InfluencersContainer extends React.Component {
 
 const mapStateToProps = state => {
     return {
-        influencers: state.influencers
+        influencers: state.influencerReducer.influencers
     }
 }
 
