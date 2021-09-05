@@ -10,6 +10,7 @@ import { BrowserRouter as Router } from 'react-router-dom';
 import influencerReducer from './reducers/influencerReducer';
 import productReducer from './reducers/productReducer';
 import apiReducer from './reducers/apiReducer';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 //store setup, storing data globally
