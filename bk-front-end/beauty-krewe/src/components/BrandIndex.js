@@ -8,6 +8,9 @@ const BrandIndex = (props) => {
 
     return(
         <div>
+            <h2>
+                Brands
+            </h2>
             {props.brands && props.brands.map((brand) => <div key={brand.id}> <Link to={`/brands/${brand.id}`}>{brand.name}</Link>  </div>)}
         </div>
     )
