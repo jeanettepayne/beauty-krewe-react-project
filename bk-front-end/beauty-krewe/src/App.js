@@ -31,6 +31,8 @@ class App extends React.Component {
   );
     }
 }
+document.body.style='background: #E0BFB8;';
+// #C9A9A6
 
 
 // const mapStateToProps = (state) => {
