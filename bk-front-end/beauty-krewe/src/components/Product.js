@@ -17,8 +17,7 @@ const Product = (props) => {
             Rating: {product.rating}
             <br></br>
             Description: {product.description}
-
-            {/* <ProductsContainer brand={brand} /> */}
+        
         </div>
     )
 }

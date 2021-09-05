@@ -39,6 +39,8 @@ const BrandProducts = (props) => {
     return(
         <div>
             {props.brand.products.map(product => <div key={product.id}> <Link to={`/products/${product.id}`}>{product.name}</Link>  </div>)}
+            <br></br>
+            Don't see the product you're looking for? Add it <Link to={`/products/new`}>here!</Link>
         </div>
     )
 

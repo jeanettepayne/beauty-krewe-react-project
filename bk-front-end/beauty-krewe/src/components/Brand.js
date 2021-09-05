@@ -1,5 +1,5 @@
 import React from 'react';
-// import { Redirect } from 'react-router-dom';
+import { Redirect } from 'react-router-dom';
 import ProductsContainer from '../containers/ProductsContainer';
 import BrandProducts from './BrandProducts';
 
@@ -10,8 +10,8 @@ const Brand = (props) => {
     return (
         <div>
             <h2>
+                {/* {brand ? null : <Redirect to='/brands' />} */}
                 {brand ? brand.name : null}
-                {/* {brand ? null : <Redirect to='/brands'/>} */}
             </h2>
 
             <BrandProducts brand={brand} />

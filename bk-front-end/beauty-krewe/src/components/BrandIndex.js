@@ -1,7 +1,7 @@
 import React from 'react';
 // import Brand from './Brand';
 import { Route, Link } from 'react-router-dom';
-import Brand from './Brand';
+
 
 const BrandIndex = (props) => {
     console.log(props)
