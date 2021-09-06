@@ -10,7 +10,7 @@ import { Route } from 'react-router';
 import ProductsContainer from './containers/ProductsContainer';
 import Homepage from './components/Homepage';
 import fetchApi from './actions/fetchApi';
-import Navbar from './components/Navbar';
+import NavBar from './components/NavBar';
 import Footer from './components/Footer';
 
 
@@ -23,7 +23,7 @@ class App extends React.Component {
   render () {
     return (
     <div className="App">
-      <Navbar />
+      <NavBar />
       <BrandsContainer />
       <ProductsContainer />
       <InfluencersContainer /> 
