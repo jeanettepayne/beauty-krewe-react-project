@@ -18,10 +18,10 @@
 # ])
 
 
-    # tati = Influencer.create(name: 'Tati Westbrook')
-    # kristi = Influencer.create(name: 'RawBeautyKristi')
-    # nail = Influencer.create(name: 'SimplyNailogical')
-    # jaclyn = Influencer.create(name: 'Jaclyn Hill')
+    tati = Influencer.create(name: 'Tati Westbrook')
+    kristi = Influencer.create(name: 'RawBeautyKristi')
+    nail = Influencer.create(name: 'SimplyNailogical')
+    jaclyn = Influencer.create(name: 'Jaclyn Hill')
     
     # he = Brand.create(name: 'High End Brand')
     # ab = Brand.create(name: 'Affordable Brand')
