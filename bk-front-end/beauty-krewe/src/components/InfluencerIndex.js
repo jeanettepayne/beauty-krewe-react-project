@@ -2,18 +2,33 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Accordion from 'react-bootstrap/Accordion'
 import Card from 'react-bootstrap/Card'
+import Button from 'react-bootstrap/Button'
 
 const InfluencerIndex = (props) => {
 
     return(
+        // <div>
+        //     <h2>
+        //         Influencers
+        //     </h2>
+        //     {props.influencers && props.influencers.map(influencer => 
+        //            <div key={influencer.id}> <Link to={`/influencers/${influencer.id}`}> {influencer.name} </Link></div>)}
+        // </div>
+
         <div>
             <h2>
                 Influencers
             </h2>
+            <div className="d-grid gap-2">
             {props.influencers && props.influencers.map(influencer => 
-                   <div key={influencer.id}> <Link to={`/influencers/${influencer.id}`}> {influencer.name} </Link></div>)}
+                <Link to={`/influencers/${influencer.id}`}> <Button key={influencer.id} variant="secondary">{influencer.name}</Button> </Link>)}
+            </div>
         </div>
 
+
+
+
+        // ATTEMPTED ACCORDION
         // <div>
         //     <h2>Influencers</h2>
         //     <div style={{display: 'flex', justifyContent: 'center'}}>
