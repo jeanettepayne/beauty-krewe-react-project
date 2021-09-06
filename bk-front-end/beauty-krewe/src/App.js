@@ -10,6 +10,7 @@ import { Route } from 'react-router';
 import ProductsContainer from './containers/ProductsContainer';
 import Homepage from './components/Homepage';
 import fetchApi from './actions/fetchApi';
+import Navbar from './components/Navbar';
 
 
 class App extends React.Component {
@@ -21,6 +22,7 @@ class App extends React.Component {
   render () {
     return (
     <div className="App">
+      <Navbar />
       <BrandsContainer />
       <ProductsContainer />
       <InfluencersContainer />
