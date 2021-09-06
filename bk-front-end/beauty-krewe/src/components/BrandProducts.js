@@ -33,13 +33,34 @@
 import React from 'react';
 // import Brand from './Brand';
 import { Route, Link } from 'react-router-dom';
+import Accordion from 'react-bootstrap/Accordion'
 
 const BrandProducts = (props) => {
 
     return(
         <div>
-            {props.brand.products.map(product => <div key={product.id}> <Link to={`/products/${product.id}`}>{product.name}</Link>  </div>)}
-            <br></br>
+            {/* {props.brand.products.map(product => <div key={product.id}> <Link to={`/products/${product.id}`}>{product.name}</Link>  </div>)}
+            <br></br> */}
+
+        {/* // ACCORDION ATTEMPT */}
+        <div style={{display: 'flex', justifyContent: 'center'}}>
+            <Accordion>
+                {props.brand.products && props.brand.products.map(product =>
+                    <Accordion.Item eventKey={product.id}>
+                        <Accordion.Header>{product.name}</Accordion.Header>
+                            <Accordion.Body>
+                                FIX BRAND ASSOCIATION TO NAME NOT ID <br></br>
+                                Brand: {product.brand_id}<br></br>
+                                Price: ${product.price}<br></br>
+                                Rating: {product.rating}<br></br>
+                                Description: {product.description}<br></br>
+                            
+                            </Accordion.Body>
+                    </Accordion.Item>)}
+            </Accordion>
+        </div>
+
+
             Don't see the product you're looking for? Add it <Link to={`/products/new`}>here!</Link>
         </div>
     )

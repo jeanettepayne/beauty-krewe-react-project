@@ -22,6 +22,7 @@ const NavBar = () => {
       <Nav.Link href="/">Home</Nav.Link>
       <Nav.Link href="/brands">Brands</Nav.Link>
       <Nav.Link href="/influencers">Influencers</Nav.Link>
+      <Nav.Link href="/products">Products</Nav.Link>
     </Nav>
     </Container>
   </Navbar>
