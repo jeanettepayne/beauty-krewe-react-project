@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Accordion from 'react-bootstrap/Accordion'
 
 
 const Influencer = (props) => {
@@ -16,7 +17,24 @@ const Influencer = (props) => {
                 Recommended Products
             </em>
             {/* fix on refresh - doesn't show list */}
-            {influencer.products && influencer.products.map(product => <div key={product.id}> <Link to={`/products/${product.id}`}>{product.name}</Link> </div>)}
+            {/* {influencer.products && influencer.products.map(product => <div key={product.id}> <Link to={`/products/${product.id}`}>{product.name}</Link> </div>)} */}
+
+        {/* // ACCORDION ATTEMPT */}
+        <div style={{display: 'flex', justifyContent: 'center'}}>
+        <Accordion>
+            {influencer.products && influencer.products.map(product =>
+                <Accordion.Item eventKey={product.id}>
+                    <Accordion.Header>{product.name}</Accordion.Header>
+                        <Accordion.Body>
+                            Price: ${product.price}<br></br>
+                            Rating: {product.rating}<br></br>
+                            Description: {product.description}<br></br>
+                            
+                        </Accordion.Body>
+                </Accordion.Item>)}
+        </Accordion>
+        </div>
+
 
         </div>
     )
