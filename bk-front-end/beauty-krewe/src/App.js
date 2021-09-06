@@ -11,6 +11,7 @@ import ProductsContainer from './containers/ProductsContainer';
 import Homepage from './components/Homepage';
 import fetchApi from './actions/fetchApi';
 import Navbar from './components/Navbar';
+import Footer from './components/Footer';
 
 
 class App extends React.Component {
@@ -25,10 +26,11 @@ class App extends React.Component {
       <Navbar />
       <BrandsContainer />
       <ProductsContainer />
-      <InfluencersContainer />
+      <InfluencersContainer /> 
       {/* <ProductForm /> */}
       {/* <Route path='/products/:id' render={(routerProps) => <Product {...routerProps} products={this.props.brand.products} />} /> */}
       <Route exact path='/' render={() => <Homepage />} />
+      <Footer />
     </div>
   );
     }
