@@ -49,10 +49,10 @@ const BrandProducts = (props) => {
                     <Accordion.Item eventKey={product.id}>
                         <Accordion.Header>{product.name}</Accordion.Header>
                             <Accordion.Body>
-                                Price: ${product.price}<br></br>
-                                Rating: {product.rating}<br></br>
-                                Description: {product.description}<br></br>
-                                ADD INFLUENCERS WHO RECOMMEND IT
+                                ${product.price}<br></br>
+                                {product.description}<br></br>
+                                <br></br>
+                                <em>Recommended by</em>
                             
                             </Accordion.Body>
                     </Accordion.Item>)}

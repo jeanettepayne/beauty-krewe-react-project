@@ -22,7 +22,7 @@ const ProductIndex = (props) => {
             <Accordion>
                 {props.products[0] && props.products[0].map(product =>
                     <Accordion.Item eventKey={product.id}>
-                        <Accordion.Header>{product.name}</Accordion.Header>
+                        <Accordion.Header>{product.name} - <i>{product.brand}</i></Accordion.Header>
                             <Accordion.Body>
                                 Brand: {product.brand.name}<br></br>
                                 Price: ${product.price}<br></br>
@@ -32,19 +32,18 @@ const ProductIndex = (props) => {
                             </Accordion.Body>
                     </Accordion.Item>)}
 
-                    {/* FOR USE WITH EXTERNAL API */}
+                    {/* FOR USE WITH EXTERNAL API
                     {props.products[1] && props.products[1].map(product =>
                     <Accordion.Item eventKey={product.id}>
                         <Accordion.Header>{product.name} - <i>{product.brand}</i></Accordion.Header>
                             <Accordion.Body>
-                                {/* Brand: {product.brand}<br></br> */}
                                 Price: ${product.price}<br></br>
                                 Consider taking rating out
                                 Rating: {product.rating}<br></br>
                                 {product.description}<br></br>
                             
                             </Accordion.Body>
-                    </Accordion.Item>)}
+                    </Accordion.Item>)} */}
             </Accordion>
         </div>
             

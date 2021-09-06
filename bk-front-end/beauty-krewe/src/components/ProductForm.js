@@ -13,7 +13,7 @@ class ProductForm extends React.Component {
         price: '', 
         rating: '', 
         description: '',
-        brand: '',
+        brand: '-- Select Brand --',
         influencers: ''
     }
 
@@ -38,6 +38,7 @@ class ProductForm extends React.Component {
 
     render() {
         return (
+            
             // <div>
             //     <h3>Add a Product</h3>
             //     <form onSubmit={this.handleSubmit}>
@@ -75,29 +76,31 @@ class ProductForm extends React.Component {
                         <Form.Label>
                             Product Name
                         </Form.Label>
-                        <Form.Control type="text" placeholder="Name" />
+                        <Form.Control type="text" placeholder="Name" value={this.state.name} name="name" onChange={this.handleChange}/>
 
                         <Form.Label>
                             Brand
                         </Form.Label>
-                        <Form.Select defaultValue="Choose...">
-                            <option>Choose...</option>
-                            <option>...</option>
+                        <Form.Select defaultValue="-- Select Brand --" onChange={this.handleChange}>
+                            <option>-- Select Brand --</option>
+                            {this.props.brands[0].map(brand =>
+                                <option id={brand.id}>{brand.name}</option>
+                            )}
                         </Form.Select>
                         
 
                         <Form.Label>
                             Price
                         </Form.Label>
-                        <Form.Control type="text" placeholder="Price (Without $)" />
+                        <Form.Control type="text" placeholder="Price (Without $)" value={this.state.price} name="price" onChange={this.handleChange}/>
 
                         <Form.Label>
                             Description
                         </Form.Label>
-                        <Form.Control as="textarea" type="textarea" placeholder="Full Product Description" />
+                        <Form.Control as="textarea" type="textarea" placeholder="Full Product Description" value={this.state.description} name="description" onChange={this.handleChange}/>
                     </Form.Group>
 
-                    <Button variant="secondary" type="submit">
+                    <Button variant="secondary" type="submit" value="submit">
                         Add Product
                     </Button>
                     
