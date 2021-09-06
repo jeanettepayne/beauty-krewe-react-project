@@ -11,6 +11,8 @@ const Homepage = (props) => {
             <br></br>
             <h1>Welcome to Beauty Krewe!</h1>
             <h4><em>Your premiere source for beauty product recommendations</em></h4>
+            <br></br>
+            <br></br>
             <div style={{display: 'flex', justifyContent: 'center'}}>
             {/* <CardColumns xs="auto">
             <Card bg="light-blue" border="dark" style={{ width: '18rem' }}>
