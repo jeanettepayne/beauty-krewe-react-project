@@ -49,11 +49,10 @@ const BrandProducts = (props) => {
                     <Accordion.Item eventKey={product.id}>
                         <Accordion.Header>{product.name}</Accordion.Header>
                             <Accordion.Body>
-                                FIX BRAND ASSOCIATION TO NAME NOT ID <br></br>
-                                Brand: {product.brand_id}<br></br>
                                 Price: ${product.price}<br></br>
                                 Rating: {product.rating}<br></br>
                                 Description: {product.description}<br></br>
+                                ADD INFLUENCERS WHO RECOMMEND IT
                             
                             </Accordion.Body>
                     </Accordion.Item>)}
