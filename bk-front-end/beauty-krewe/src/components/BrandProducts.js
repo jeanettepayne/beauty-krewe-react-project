@@ -53,6 +53,7 @@ const BrandProducts = (props) => {
                                 {product.description}<br></br>
                                 <br></br>
                                 <em>Recommended by</em>
+
                             
                             </Accordion.Body>
                     </Accordion.Item>)}

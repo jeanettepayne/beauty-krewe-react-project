@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button'
 
-class AddInfluencer extends React.Component {
+class AddInfluencerRec extends React.Component {
 
     state= {
         name: ''
@@ -40,3 +40,5 @@ class AddInfluencer extends React.Component {
     }
 
 }
+
+export default AddInfluencerRec;
