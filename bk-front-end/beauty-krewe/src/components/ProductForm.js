@@ -2,8 +2,9 @@ import React from 'react';
 import { connect } from 'react-redux';
 import addProduct from '../actions/addProduct';
 import Creatable, { makeCreatableSelect } from 'react-select/creatable';
-import Form from 'react-bootstrap/Form'
-import Button from 'react-bootstrap/Button'
+import Form from 'react-bootstrap/Form';
+import Button from 'react-bootstrap/Button';
+import { FloatingLabel } from 'react-bootstrap';
 
 
 class ProductForm extends React.Component {
@@ -73,10 +74,12 @@ class ProductForm extends React.Component {
                 <Form onSubmit={this.handleSubmit}>
         
                     <Form.Group className="mb-3">
-                        <Form.Label>
-                            Product Name
-                        </Form.Label>
-                        <Form.Control type="text" placeholder="Name" value={this.state.name} name="name" onChange={this.handleChange}/>
+                        <FloatingLabel
+                        controlId="floatingInput"
+                        label="Product Name"
+                        className="mb-3">
+                            <Form.Control type="text" placeholder="Name" value={this.state.name} name="name" onChange={this.handleChange}/>
+                        </FloatingLabel>
 
                         <Form.Label>
                             Brand
@@ -87,17 +90,21 @@ class ProductForm extends React.Component {
                                 <option id={brand.id}>{brand.name}</option>
                             )}
                         </Form.Select>
-                        
+                        <br></br>
 
-                        <Form.Label>
-                            Price
-                        </Form.Label>
-                        <Form.Control type="text" placeholder="Price (Without $)" value={this.state.price} name="price" onChange={this.handleChange}/>
+                        <FloatingLabel
+                        controlId="floatingInput"
+                        label="Price (Without $)"
+                        className="mb-3">
+                            <Form.Control type="text" placeholder="Price (Without $)" value={this.state.price} name="price" onChange={this.handleChange}/>
+                        </FloatingLabel>
 
-                        <Form.Label>
-                            Description
-                        </Form.Label>
-                        <Form.Control as="textarea" type="textarea" placeholder="Full Product Description" value={this.state.description} name="description" onChange={this.handleChange}/>
+                        <FloatingLabel
+                        controlId="floatingInput"
+                        label="Description"
+                        className="mb-3">
+                            <Form.Control as="textarea" type="textarea" placeholder="Full Product Description" value={this.state.description} name="description" onChange={this.handleChange}/>
+                        </FloatingLabel>
                     </Form.Group>
 
                     <Button variant="secondary" type="submit" value="submit">

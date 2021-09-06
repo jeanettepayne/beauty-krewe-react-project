@@ -16,11 +16,14 @@ const Influencer = (props) => {
             <em>
                 Recommended Products
             </em>
+            <br></br>
             {/* fix on refresh - doesn't show list */}
             {/* {influencer.products && influencer.products.map(product => <div key={product.id}> <Link to={`/products/${product.id}`}>{product.name}</Link> </div>)} */}
 
+            Add Product to {influencer.name}'s Recommended Items List
+
         {/* // ACCORDION ATTEMPT */}
-        <div style={{display: 'flex', justifyContent: 'center'}}>
+        {/* <div style={{display: 'flex', justifyContent: 'center'}}>
         <Accordion>
             {influencer.products && influencer.products.map(product =>
                 <Accordion.Item eventKey={product.id}>
@@ -35,7 +38,7 @@ const Influencer = (props) => {
                         </Accordion.Body>
                 </Accordion.Item>)}
         </Accordion>
-        </div>
+        </div> */}
 
 
         </div>
