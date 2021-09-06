@@ -16,9 +16,9 @@ import Footer from './components/Footer';
 
 class App extends React.Component {
 
-  // componentDidMount() {
-  //   this.props.fetchApi()    
-  // }
+  componentDidMount() {
+    this.props.fetchApi()    
+  }
 
   render () {
     return (
@@ -40,10 +40,10 @@ document.body.style='background: #ffebf6;'
 // #E0BFB8
 
 
-// const mapStateToProps = (state) => {
-//   return {
-//     products: state.productReducer.products
-//   }
-// }
+const mapStateToProps = (state) => {
+  return {
+    products: state.productReducer.products
+  }
+}
 
 export default connect(null, {fetchApi})(App);
