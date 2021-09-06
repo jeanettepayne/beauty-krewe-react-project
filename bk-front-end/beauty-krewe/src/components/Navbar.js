@@ -1,6 +1,6 @@
 import React from 'react';
 import { Route, NavLink } from 'react-router-dom';
-import { Nav } from 'react-bootstrap';
+import Nav from 'react-bootstrap/Nav'
 
 const link = {
     width: "100px",
@@ -13,29 +13,7 @@ const link = {
 const Navbar = () => {
     return (
     <div>
-     {/* <NavLink  */}
-    {/* //         to='/'
-    //         exact
-    //         style={link}
-    //         activeStyle={{
-    //             background: "white",
-    //         }}
-    //     >
-    //     Home
-    //     </NavLink>
-
-    //     <NavLink 
-    //         to='/products'
-    //         exact
-    //         style={link}
-    //         activeStyle={{
-    //             background: "white",
-    //         }}
-    //     >
-    //     Products
-    //     </NavLink> */}
-
-    <Nav variant="tabs">
+    <Nav justify variant="tabs" bg="light" >
         <Nav.Item>
             <Nav.Link href="/">Home</Nav.Link>
         </Nav.Item>
