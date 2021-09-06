@@ -4,13 +4,6 @@ import Nav from 'react-bootstrap/Nav'
 import Navbar from 'react-bootstrap/Navbar';
 import { Container } from 'react-bootstrap';
 
-const link = {
-    width: "100px",
-    padding: "12px",
-    margin: "0 6px 6px",
-    background: "#E0BFB8",
-    color: "black"
-}
 
 const NavBar = () => {
     return (
