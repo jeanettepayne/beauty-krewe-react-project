@@ -15,7 +15,7 @@ const link = {
 const NavBar = () => {
     return (
     <div>
-    <Navbar bg="light" variant="light" fixed="top">
+    <Navbar bg="light" variant="light" sticky="top">
     <Container>
     <Navbar.Brand href="/">Beauty Krewe</Navbar.Brand>
     <Nav>
