@@ -81,16 +81,17 @@ class ProductForm extends React.Component {
                             <Form.Control type="text" placeholder="Name" value={this.state.name} name="name" onChange={this.handleChange}/>
                         </FloatingLabel>
 
-                        <Form.Label>
-                            Brand
-                        </Form.Label>
+                        <FloatingLabel
+                        controlId="floatingInput"
+                        label="Brand"
+                        className="mb-3">
                         <Form.Select defaultValue="-- Select Brand --" onChange={this.handleChange}>
                             <option>-- Select Brand --</option>
                             {this.props.brands[0].map(brand =>
                                 <option id={brand.id}>{brand.name}</option>
                             )}
                         </Form.Select>
-                        <br></br>
+                        </FloatingLabel>
 
                         <FloatingLabel
                         controlId="floatingInput"
