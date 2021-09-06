@@ -27,6 +27,6 @@ class Api::InfluencersController < ApplicationController
 
     private
     def influencer_params
-        params.require(:influencer).permit(:name)
+        params.require(:influencer).permit(:name, :influencers_product)
     end
 end

@@ -20,7 +20,6 @@ ActiveRecord::Schema.define(version: 2021_08_26_012209) do
 
   create_table "influencers", force: :cascade do |t|
     t.string "name"
-    t.integer "product_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -40,6 +39,7 @@ ActiveRecord::Schema.define(version: 2021_08_26_012209) do
     t.integer "brand_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["brand_id"], name: "index_products_on_brand_id"
   end
 
 end

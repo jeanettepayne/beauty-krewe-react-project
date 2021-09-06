@@ -5,7 +5,8 @@ class CreateProducts < ActiveRecord::Migration[6.0]
       t.string :price
       t.string :rating
       t.text :description
-      t.integer :brand_id
+      t.belongs_to :brand
+      # t.integer :brand_id
 
       t.timestamps
     end
