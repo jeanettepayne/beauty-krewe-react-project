@@ -14,13 +14,20 @@ class ProductForm extends React.Component {
         price: '', 
         rating: '', 
         description: '',
-        brand: '-- Select Brand --',
+        brand_id: '',
         influencers: ''
     }
 
     handleChange = (event) => {
+        console.log(event.target.name)
         this.setState({
             [event.target.name]: event.target.value
+        })
+    }
+
+    handleDropdownChange = (event) => {
+        this.setState({
+            brand_id: event.target.value
         })
     }
 
@@ -32,7 +39,7 @@ class ProductForm extends React.Component {
             price: '', 
             rating: '', 
             description: '',
-            brand: '',
+            brand_id: '',
             influencers: ''
         })
     }
@@ -85,10 +92,10 @@ class ProductForm extends React.Component {
                         controlId="floatingInput"
                         label="Brand"
                         className="mb-3">
-                        <Form.Select defaultValue="-- Select Brand --" onChange={this.handleChange}>
+                        <Form.Select onChange={this.handleDropdownChange}>
                             <option>-- Select Brand --</option>
                             {this.props.brands[0].map(brand =>
-                                <option id={brand.id}>{brand.name}</option>
+                                <option name="brand_id" value={brand.id} id={brand.id}>{brand.name}</option>
                             )}
                         </Form.Select>
                         </FloatingLabel>
