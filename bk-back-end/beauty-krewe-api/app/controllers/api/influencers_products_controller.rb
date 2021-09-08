@@ -1,4 +1,4 @@
-class Api::InfluencersProducts_Controller < ApplicationController
+class Api::InfluencersProductsController < ApplicationController
 
     def index
         influencers_products = InfluencersProduct.all
@@ -7,9 +7,10 @@ class Api::InfluencersProducts_Controller < ApplicationController
 
     def create
         influencers_product = InfluencersProduct.new(influencers_product_params)
+        binding.pry
         
         if influencers_product.save
-            render json: influencers_product, each_serializer: ProductSerializer
+            render json: influencers_product, each_serializer: InfluencersProductsSerializer
         else
             render json: {error: 'Oops! There was an error adding the product.'}
         end

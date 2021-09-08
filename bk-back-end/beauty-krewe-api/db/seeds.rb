@@ -54,4 +54,8 @@
                     description: "#{product["description"]}", 
                     brand: newBrand)
             end
+
+        InfluencersProduct.create(brand_id: 1, influencer_id:1)
+        InfluencersProduct.create(brand_id: 2, influencer_id:2)
+        InfluencersProduct.create(brand_id: 3, influencer_id:3)
     
