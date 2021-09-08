@@ -1,6 +1,4 @@
 import React from 'react';
-import { Redirect } from 'react-router-dom';
-import ProductsContainer from '../containers/ProductsContainer';
 import BrandProducts from './BrandProducts';
 
 const Brand = (props) => {
@@ -15,8 +13,6 @@ const Brand = (props) => {
             </h2>
 
             <BrandProducts brand={brand} />
-
-            {/* <ProductsContainer brand={brand} /> */}
         </div>
     )
 }

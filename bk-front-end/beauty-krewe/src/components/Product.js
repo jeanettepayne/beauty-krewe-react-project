@@ -2,8 +2,6 @@ import React from 'react';
 
 const Product = (props) => {
 
-    console.log(props)
-    // debugger;
     let product = props.products[0].filter(product => product.id == props.match.params.id)[0]
 
     return (

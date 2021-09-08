@@ -1,6 +1,4 @@
 import React from 'react';
-// import Product from './Product';
-import { Route, Link } from 'react-router-dom';
 import Accordion from 'react-bootstrap/Accordion'
 
 const ProductIndex = (props) => {

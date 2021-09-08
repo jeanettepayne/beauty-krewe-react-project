@@ -1,19 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Accordion from 'react-bootstrap/Accordion'
-import Card from 'react-bootstrap/Card'
 import Button from 'react-bootstrap/Button'
 
 const InfluencerIndex = (props) => {
 
     return(
-        // <div>
-        //     <h2>
-        //         Influencers
-        //     </h2>
-        //     {props.influencers && props.influencers.map(influencer => 
-        //            <div key={influencer.id}> <Link to={`/influencers/${influencer.id}`}> {influencer.name} </Link></div>)}
-        // </div>
 
         <div>
             <h2>
@@ -25,27 +16,6 @@ const InfluencerIndex = (props) => {
             </div>
         </div>
 
-
-
-
-        // ATTEMPTED ACCORDION
-        // <div>
-        //     <h2>Influencers</h2>
-        //     <div style={{display: 'flex', justifyContent: 'center'}}>
-        //     <Accordion flush>
-            
-                // <Accordion.Item>
-                   //{props.influencers && props.influencers.map(influencer => 
-                    // <Accordion.Header eventKey={influencer.id}> {influencer.name} </Accordion.Header>
-                    
-               // )}
-                //</Accordion.Item> 
-                
-                     
-
-        //     </Accordion>
-        //     </div>
-        // </div>
     )
 
 }

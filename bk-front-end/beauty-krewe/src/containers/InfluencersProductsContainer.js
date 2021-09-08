@@ -1,10 +1,9 @@
 import React from 'react';
-import InfluencerIndex from '../components/InfluencerIndex';
 import { connect } from 'react-redux';
 import fetchInfluencersProducts from '../actions/fetchInfluencersProducts';
 import { Route, Switch } from 'react-router-dom';
 import AddInfluencerRec from '../components/AddInfluencerRec';
-import Influencer from '../components/Influencer';
+
 
 class InfluencersProductsContainer extends React.Component {
 

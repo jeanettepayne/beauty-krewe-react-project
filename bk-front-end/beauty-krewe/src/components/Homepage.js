@@ -1,7 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Card from 'react-bootstrap/Card';
-import { CardColumns } from 'react-bootstrap';
 import Button from 'react-bootstrap/Button'
 
 const Homepage = (props) => {
@@ -14,25 +12,7 @@ const Homepage = (props) => {
             <br></br>
             <br></br>
             <div style={{display: 'flex', justifyContent: 'center'}}>
-            {/* <CardColumns xs="auto">
-            <Card bg="light-blue" border="dark" style={{ width: '18rem' }}>
-                <Card.Body>
-                    <Card.Title><Link to={'/brands'}>Browse by Brand</Link></Card.Title>
-                </Card.Body>
-            </Card>
-            <br></br>
-            <Card bg="light" border="dark" style={{ width: '18rem' }}>
-                <Card.Body>
-                    <Card.Title><Link to={'/influencers'}>Browse by Influencer</Link></Card.Title>
-                </Card.Body>
-            </Card>
-            <br></br>
-            <Card bg="light" border="dark" style={{ width: '18rem' }}>
-                <Card.Body>
-                    <Card.Title><Link to={'/products'}>Browse All Products</Link></Card.Title>
-                </Card.Body>
-            </Card>
-            </CardColumns> */}
+        
             <div className="d-grid gap-2">
                 <Link to={'/brands'}><Button variant="secondary" size="lg">
                     Browse by Brand

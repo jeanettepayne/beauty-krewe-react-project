@@ -3,7 +3,6 @@ import InfluencerIndex from '../components/InfluencerIndex';
 import { connect } from 'react-redux';
 import fetchInfluencers from '../actions/fetchInfluencers';
 import { Route, Switch } from 'react-router-dom';
-import AddInfluencerRec from '../components/AddInfluencerRec';
 import Influencer from '../components/Influencer';
 
 class InfluencersContainer extends React.Component {

@@ -6,8 +6,6 @@ export default function fetchApi() {
          type: 'FETCH_PRODUCTS_API',
          payload: products,
 
-        //  type: 'FETCH_BRANDS_API',
-        //  payload: [...new Set(products.map(product => product.brand))]
      }))
     }
 }

@@ -1,5 +1,4 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
 import Nav from 'react-bootstrap/Nav'
 import Navbar from 'react-bootstrap/Navbar';
 import { Container } from 'react-bootstrap';
@@ -8,36 +7,17 @@ import { Container } from 'react-bootstrap';
 const NavBar = () => {
     return (
     <div>
-    <Navbar bg="light" variant="light" sticky="top">
-    <Container>
-    <Navbar.Brand href="/">Beauty Krewe</Navbar.Brand>
-    <Nav>
-      <Nav.Link href="/">Home</Nav.Link>
-      <Nav.Link href="/brands">Brands</Nav.Link>
-      <Nav.Link href="/influencers">Influencers</Nav.Link>
-      {/* <Nav.Link href="/products">Products</Nav.Link> */}
-    </Nav>
-    </Container>
-  </Navbar>
-    {/* <Nav justify variant="tabs" bg="light" >
-        <Nav.Item>
-            <Nav.Link href="/" bg="light">Home</Nav.Link>
-        </Nav.Item>
-
-        <Nav.Item>
-            <Nav.Link href="/brands">Brands</Nav.Link>
-        </Nav.Item>
-
-        <Nav.Item>
-            <Nav.Link href="/influencers">
-            Influencers
-            </Nav.Link>
-        </Nav.Item>
-
-        <Nav.Item>
-            <Nav.Link href="/products">Products</Nav.Link>
-        </Nav.Item>
-    </Nav> */}
+        <Navbar bg="light" variant="light" sticky="top">
+            <Container>
+                <Navbar.Brand href="/">Beauty Krewe</Navbar.Brand>
+                  <Nav>
+                    <Nav.Link href="/">Home</Nav.Link>
+                    <Nav.Link href="/brands">Brands</Nav.Link>
+                    <Nav.Link href="/influencers">Influencers</Nav.Link>
+                    {/* <Nav.Link href="/products">Products</Nav.Link> */}
+                  </Nav>
+            </Container>
+        </Navbar>
     </div>
     )
     
