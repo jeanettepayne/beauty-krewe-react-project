@@ -26,8 +26,8 @@ class AddInfluencerRec extends React.Component {
 
     handleSubmit = (event) => {
         event.preventDefault()
-        console.log(this.props)
         this.props.addInfluencerProduct(this.state)
+        this.props.history.push(`/influencers/${this.state.influencer_id}`)
         this.setState({
             prouduct_id: '',
             influencer_id: ''

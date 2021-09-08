@@ -39,10 +39,6 @@ const BrandProducts = (props) => {
 
     return(
         <div>
-            {/* {props.brand.products.map(product => <div key={product.id}> <Link to={`/products/${product.id}`}>{product.name}</Link>  </div>)}
-            <br></br> */}
-
-        {/* // ACCORDION ATTEMPT */}
         <div style={{display: 'flex', justifyContent: 'center'}}>
             <Accordion>
                 {props.brand.products && props.brand.products.map(product =>
@@ -52,8 +48,11 @@ const BrandProducts = (props) => {
                                 ${product.price}<br></br>
                                 {product.description}<br></br>
                                 <br></br>
-                                <em>Recommended by</em>
-
+                                {/* <em>Recommended by</em>
+                                <br></br>
+                                {product.influencers.map(influencer =>
+                                    <p>{influencer.name}</p>
+                                )} */}
                             
                             </Accordion.Body>
                     </Accordion.Item>)}
