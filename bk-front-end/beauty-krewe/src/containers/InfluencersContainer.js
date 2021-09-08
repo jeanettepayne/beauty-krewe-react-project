@@ -18,6 +18,7 @@ class InfluencersContainer extends React.Component {
               <Switch>
                 {/* <InfluencerIndex influencers={this.props.influencers} /> */}
                 <Route exact path='/influencers' render={(routerProps) => <InfluencerIndex {...routerProps} influencers={this.props.influencers} />} />
+                
                 {/* <Route path='/influencers/new' render={(routerProps) => <ProductForm {...routerProps} brands={this.props.brands} products={this.props.products} />}/> */}
                 <Route path='/influencers/:id' render={(routerProps) => <Influencer {...routerProps} influencers={this.props.influencers} />} />
                 </Switch>
@@ -28,7 +29,9 @@ class InfluencersContainer extends React.Component {
 
 const mapStateToProps = state => {
     return {
-        influencers: state.influencerReducer.influencers
+        influencers: state.influencerReducer.influencers,
+        products: state.productReducer.products,
+        influencersProducts: state.influencersProductReducer.influencersProducts
     }
 }
 

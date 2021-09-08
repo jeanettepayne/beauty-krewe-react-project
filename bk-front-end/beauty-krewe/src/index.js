@@ -8,6 +8,7 @@ import { Provider } from 'react-redux';
 import brandReducer from './reducers/brandReducer';
 import { BrowserRouter as Router } from 'react-router-dom';
 import influencerReducer from './reducers/influencerReducer';
+import influencersProductReducer from './reducers/influencersProductReducer';
 import productReducer from './reducers/productReducer';
 import apiReducer from './reducers/apiReducer';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -21,6 +22,7 @@ const rootReducer = combineReducers({
   brandReducer,
   productReducer,
   influencerReducer,
+  influencersProductReducer,
   apiReducer
 })
 

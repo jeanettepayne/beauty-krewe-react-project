@@ -12,13 +12,11 @@ import Homepage from './components/Homepage';
 import fetchApi from './actions/fetchApi';
 import NavBar from './components/NavBar';
 import Footer from './components/Footer';
+import fetchInfluencersProducts from './actions/fetchInfluencersProducts';
+import InfluencersProductsContainer from './containers/InfluencersProductsContainer';
 
 
 class App extends React.Component {
-
-  // componentDidMount() {
-  //   this.props.fetchApi()    
-  // }
 
   render () {
     return (
@@ -27,6 +25,7 @@ class App extends React.Component {
       <BrandsContainer />
       <ProductsContainer />
       <InfluencersContainer /> 
+      <InfluencersProductsContainer />
       {/* <ProductForm /> */}
       {/* <Route path='/products/:id' render={(routerProps) => <Product {...routerProps} products={this.props.brand.products} />} /> */}
       <Route exact path='/' render={() => <Homepage />} />

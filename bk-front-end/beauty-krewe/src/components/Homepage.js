@@ -40,9 +40,9 @@ const Homepage = (props) => {
                 <Link to={'/influencers'}><Button variant="secondary" size="lg">
                     Browse by Influencer
                 </Button></Link>
-                <Link to={'/products'}><Button variant="secondary" size="lg">
+                {/* <Link to={'/products'}><Button variant="secondary" size="lg">
                     Browse All Products
-                </Button></Link>
+                </Button></Link> */}
             </div>
             </div>
             
