@@ -1,4 +1,4 @@
-export default function addInfluencersProduct(data) {
+export default function addInfluencerProduct(data) {
     return (dispatch) => {
         fetch('http://localhost:3001/api/influencersproducts', {
             headers: {
@@ -9,6 +9,6 @@ export default function addInfluencersProduct(data) {
             body: JSON.stringify(data)
         })
         .then(response => response.json())
-        .then(influencersProduct => dispatch({type: 'ADD_INFLUENCERS_PRODUCT', payload: influencersProduct}))
+        .then(influencersProducts => dispatch({type: 'ADD_INFLUENCERS_PRODUCT', payload: influencersProducts}))
     }
 }

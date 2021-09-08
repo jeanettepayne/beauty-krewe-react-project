@@ -1,6 +1,5 @@
 import React from 'react';
-import { connect } from 'react-redux';
-import addInfluencersProduct from '../actions/addInfluencersProduct';
+import addInfluencerProduct from '../actions/addInfluencerProduct';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import { FloatingLabel } from 'react-bootstrap';
@@ -26,7 +25,8 @@ class AddInfluencerRec extends React.Component {
 
     handleSubmit = (event) => {
         event.preventDefault()
-        this.props.addInfluencersProduct(this.state)
+        console.log(this.props)
+        this.props.addInfluencerProduct(this.state)
         this.setState({
             prouduct_id: '',
             influencer_id: ''
