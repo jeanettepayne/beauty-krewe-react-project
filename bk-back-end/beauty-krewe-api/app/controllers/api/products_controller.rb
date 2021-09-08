@@ -7,7 +7,6 @@ class Api::ProductsController < ApplicationController
 
     def create
         product = Product.new(product_params)
-        binding.pry
         
         if product.save
             render json: product, each_serializer: ProductSerializer
