@@ -11,13 +11,18 @@ const Influencer = (props) => {
     return (
         <div>
             <h2>
-            {influencer.name}
+            {influencer.name}'s Recommendations
             </h2>
-            <em>
+                
+
+            {/* <em>
                 Recommended Products
-            </em>
+            </em> */}
+            <br></br>
             {influencer.products && influencer.products.map(product =>
-                <Link to={`/products/${product.id}`}>{product.name}</Link>)}
+               <li>
+                <Link to={`/products/${product.id}`}>{product.name}</Link>
+               </li>)}
             <br></br>
             {/* fix on refresh - doesn't show list */}
             {/* {influencer.products && influencer.products.map(product => <div key={product.id}> <Link to={`/products/${product.id}`}>{product.name}</Link> </div>)} */}

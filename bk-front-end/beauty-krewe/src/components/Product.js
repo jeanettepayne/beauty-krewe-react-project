@@ -14,9 +14,13 @@ const Product = (props) => {
             </h2>
             Price: ${product.price}
             <br></br>
-            Rating: {product.rating}
             <br></br>
             Description: {product.description}
+            <br></br>
+            <br></br>
+            Reccomended by: {product.influencers.map(influencer =>
+                <p>{influencer.name}</p>
+            )}
         
         </div>
     )
