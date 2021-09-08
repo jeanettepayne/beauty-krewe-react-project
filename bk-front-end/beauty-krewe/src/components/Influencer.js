@@ -17,7 +17,7 @@ const Influencer = (props) => {
                 Recommended Products
             </em>
             {influencer.products && influencer.products.map(product =>
-                <Link to={`/products/{product.id}`}>{product.name}</Link>)}
+                <Link to={`/products/${product.id}`}>{product.name}</Link>)}
             <br></br>
             {/* fix on refresh - doesn't show list */}
             {/* {influencer.products && influencer.products.map(product => <div key={product.id}> <Link to={`/products/${product.id}`}>{product.name}</Link> </div>)} */}

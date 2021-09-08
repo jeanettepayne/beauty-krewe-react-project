@@ -26,9 +26,7 @@ const rootReducer = combineReducers({
   apiReducer
 })
 
-// let store = createStore(brandReducer, composeEnhancers(applyMiddleware(thunk)))
-// let store = createStore(influencerReducer, composeEnhancers(applyMiddleware(thunk)))
-// let store = createStore(productReducer, composeEnhancers(applyMiddleware(thunk)))
+
 let store = createStore(rootReducer, composeEnhancers(applyMiddleware(thunk)))
 
 ReactDOM.render(

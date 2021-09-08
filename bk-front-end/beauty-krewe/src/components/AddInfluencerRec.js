@@ -3,6 +3,7 @@ import addInfluencerProduct from '../actions/addInfluencerProduct';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import { FloatingLabel } from 'react-bootstrap';
+import { connect } from 'react-redux';
 
 class AddInfluencerRec extends React.Component {
 
@@ -77,4 +78,4 @@ class AddInfluencerRec extends React.Component {
 
 }
 
-export default AddInfluencerRec;
+export default connect(null, {addInfluencerProduct})(AddInfluencerRec);
