@@ -1,8 +1,10 @@
 import React from 'react';
+import { connect } from 'react-redux';
 
 const Product = (props) => {
 
-    let product = props.products[0].filter(product => product.id == props.match.params.id)[0]
+    // debugger;
+    let product = props.products.filter(product => product.id == props.match.params.id)[0] 
 
     return (
         <div>
@@ -16,12 +18,18 @@ const Product = (props) => {
             Description: {product.description}
             <br></br>
             <br></br>
-            Reccomended by: {product.influencers.map(influencer =>
-                <p>{influencer.name}</p>
-            )}
+            {/* Reccomended by: {product.influencers.map(influencer =>
+                <p>{influencer.name}</p> */}
+            {/* )} */}
         
         </div>
     )
 }
 
-export default Product;
+const mapStateToProps = state => {
+    return {
+        products: state.productReducer.products
+    }
+}
+
+export default connect(mapStateToProps)(Product);

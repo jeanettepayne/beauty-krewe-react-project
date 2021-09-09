@@ -33,8 +33,8 @@ class ProductForm extends React.Component {
 
     handleSubmit = (event) => {
         event.preventDefault()
-        this.props.addProduct(this.state)
-        this.props.history.push(`/brands/${this.state.brand_id}`)
+        this.props.addProduct(this.state, this.props.history)
+        // this.props.history.push(`/brands/${this.state.brand_id}`)
         this.setState({
             name: '', 
             price: '', 

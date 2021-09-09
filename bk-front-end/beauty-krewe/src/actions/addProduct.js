@@ -1,5 +1,6 @@
+// import history from "../components/history"
 
-export default function addProduct(data) {
+export default function addProduct(data, history) {
     return (dispatch) => {
         fetch('http://localhost:3001/api/products', {
             headers: {
@@ -10,6 +11,11 @@ export default function addProduct(data) {
             body: JSON.stringify(data)
         })
         .then(response => response.json())
-        .then(product => dispatch({type: 'ADD_PRODUCT', payload: product}))
+        .then(product => {
+            dispatch({type: 'ADD_PRODUCT', payload: product})
+            history.push(`/products/${product.id}`)
+    
+        })
     }
 }
+

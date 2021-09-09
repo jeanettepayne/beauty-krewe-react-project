@@ -26,7 +26,7 @@ class AddInfluencerRec extends React.Component {
 
     handleSubmit = (event) => {
         event.preventDefault()
-        this.props.addInfluencerProduct(this.state)
+        this.props.addInfluencerProduct(this.state, this.props.history)
         this.props.history.push(`/influencers/${this.state.influencer_id}`)
         this.setState({
             prouduct_id: '',
@@ -60,7 +60,7 @@ class AddInfluencerRec extends React.Component {
                         className="mb-3">
                         <Form.Select onChange={this.handleProductChange}>
                             <option>-- Select Product --</option>
-                            {this.props.products[0].map(product =>
+                            {this.props.products.map(product =>
                                 <option name="product_id" value={product.id} id={product.id}>{product.name}</option>
                             )}
                         </Form.Select>

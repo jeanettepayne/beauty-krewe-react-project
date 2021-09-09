@@ -27,7 +27,8 @@ class BrandsContainer extends React.Component {
 
 const mapStateToProps = state => {
     return {
-        brands: state.brandReducer.brands
+        brands: state.brandReducer.brands,
+        products: state.productReducer.products
     }
 }
 

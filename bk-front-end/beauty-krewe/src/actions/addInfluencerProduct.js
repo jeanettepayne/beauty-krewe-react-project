@@ -1,4 +1,4 @@
-export default function addInfluencerProduct(data) {
+export default function addInfluencerProduct(data, history) {
     return (dispatch) => {
         fetch('http://localhost:3001/api/influencersproducts', {
             headers: {
@@ -9,6 +9,9 @@ export default function addInfluencerProduct(data) {
             body: JSON.stringify(data)
         })
         .then(response => response.json())
-        .then(influencersProducts => dispatch({type: 'ADD_INFLUENCERS_PRODUCT', payload: influencersProducts}))
+        .then(influencersProducts => {
+            dispatch({type: 'ADD_INFLUENCERS_PRODUCT', payload: influencersProducts})
+            history.push(`/products/${influencersProducts.product_id}`)
+        })
     }
 }
